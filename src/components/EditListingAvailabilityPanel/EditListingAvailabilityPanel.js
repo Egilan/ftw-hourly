@@ -237,6 +237,9 @@ const EditListingAvailabilityPanel = props => {
         )}
       </h1>
 
+      <h3>Tässä voit määrittää, milloin palveluasi voidaan varata.</h3>
+      <br></br>
+
       <section className={css.section}>
         <header className={css.sectionHeader}>
           <h2 className={css.sectionTitle}>
@@ -261,6 +264,10 @@ const EditListingAvailabilityPanel = props => {
           ))}
         </div>
       </section>
+
+      <h3>Tässä voit määrittää kaikki poikkeukset, jolloin olet esim. lomalla tai oletusaikataulusta poiketen vapaana.</h3>
+      <br></br>
+
       <section className={css.section}>
         <header className={css.sectionHeader}>
           <h2 className={css.sectionTitle}>

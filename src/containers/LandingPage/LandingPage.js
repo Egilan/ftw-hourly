@@ -83,6 +83,12 @@ export const LandingPageComponent = props => {
                 />
               </div>
             </li>
+            {/* <li className={css.section}>
+              <div className={css.sectionContent}>
+                <SectionNews
+                />
+              </div>
+            </li> */}
           </ul>
         </LayoutWrapperMain>
         <LayoutWrapperFooter>

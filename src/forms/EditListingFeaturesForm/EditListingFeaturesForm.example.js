@@ -1,17 +1,17 @@
 import EditListingFeaturesForm from './EditListingFeaturesForm';
 
-const NAME = 'yogaStyles';
+const NAME = 'services';
 
 const initialValueArray = ['hatha', 'vinyasa', 'yin'];
 const initialValues = { [NAME]: initialValueArray };
 
 const filterConfig = [
   {
-    id: 'yogaStyles',
+    id: 'services',
     label: 'Yoga styles',
     type: 'SelectMultipleFilter',
     group: 'secondary',
-    queryParamNames: ['pub_yogaStyles'],
+    queryParamNames: ['pub_services'],
     config: {
       mode: 'has_all',
       options: [
@@ -26,13 +26,13 @@ const filterConfig = [
   },
 ];
 
-export const YogaStyles = {
+export const Services = {
   component: EditListingFeaturesForm,
   props: {
     name: NAME,
     onSubmit: values => console.log('EditListingFeaturesForm submit:', values),
     initialValues: initialValues,
-    saveActionMsg: 'Save yoga styles',
+    saveActionMsg: 'Tallenna palvelut',
     updated: false,
     updateInProgress: false,
     disabled: false,

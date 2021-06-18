@@ -2,7 +2,9 @@
 
 .root {
   & p {
-    @apply --marketplaceH4FontStyles;
+    @apply --marketplaceBodyFontStyles;
+    /* margin: 12px 0 12px 0; */
+    line-height: 150%;
   }
   & h2 {
     /* Adjust heading margins to work with the reduced body font size */
@@ -24,3 +26,9 @@
     }
   }
 }
+
+
+/* ul {
+  margin-left: 30px;
+  list-style-type: circle;
+} */

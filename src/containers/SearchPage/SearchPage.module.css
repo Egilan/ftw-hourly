@@ -1,3 +1,4 @@
+@import '../../styles/customMediaQueries.css';
 @import '../../styles/propertySets.css';
 
 /* Can be given to Topbar when a modal is opened
@@ -30,7 +31,7 @@
 }
 
 .searchResultContainer {
-  flex-grow: 1;
+  flex-grow: 2;
   display: flex;
   flex-direction: column;
   padding: 2px 0 0 0;
@@ -109,6 +110,7 @@
 }
 
 .mapPanel {
+  flex-grow: 4;
   @media (--viewportMedium) {
     /**
      * .container is using flexbox,
@@ -116,13 +118,14 @@
      */
     flex-basis: 50%;
 
+
     /* Own layout settings */
     display: flex;
     height: 100%;
   }
 
   @media (--viewportLarge) {
-    flex-basis: 37.5%;
+    flex-basis: 55.5%;
   }
 }
 
@@ -159,11 +162,11 @@
     right: 0;
 
     /* Fixed content needs width relative to viewport */
-    width: 50vw;
+     width: 40vw;      /*tätä muokattu */
     height: calc(100vh - var(--topbarHeightDesktop));
   }
 
   @media (--viewportLarge) {
-    width: 37.5vw;
+    width: 47.5vw;    /*tätä muokattu */
   }
 }

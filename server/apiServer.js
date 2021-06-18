@@ -13,6 +13,8 @@ const wellKnownRouter = require('./wellKnownRouter');
 
 const radix = 10;
 const PORT = parseInt(process.env.REACT_APP_DEV_API_SERVER_PORT, radix);
+// console.log("Dev Port: "+ process.env.REACT_APP_DEV_API_SERVER_PORT)
+// console.log("Port: " + PORT)
 const app = express();
 
 // NOTE: CORS is only needed in this dev API server because it's

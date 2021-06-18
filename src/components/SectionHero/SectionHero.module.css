@@ -71,7 +71,9 @@
 }
 
 .heroSubTitle {
-  @apply --marketplaceH4FontStyles;
+  @apply --marketplaceH3FontStyles;
+
+  font-weight: var(--fontWeightThin);
 
   color: var(--matterColorLight);
   margin: 0 0 32px 0;
@@ -88,8 +90,11 @@
 .heroButton {
   @apply --marketplaceButtonStyles;
   composes: animation;
+  font-weight: var(--fontWeightBold);
 
   animation-delay: 0.8s;
+
+  border-radius: 10px;
 
   @media (--viewportMedium) {
     display: block;

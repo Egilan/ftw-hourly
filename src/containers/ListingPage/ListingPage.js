@@ -46,7 +46,6 @@ import { TopbarContainer, NotFoundPage } from '../../containers';
 
 import {
   sendEnquiry,
-  loadData,
   setInitialValues,
   fetchTimeSlots,
   fetchTransactionLineItems,
@@ -384,8 +383,8 @@ export class ListingPageComponent extends Component {
       </NamedLink>
     );
 
-    const yogaStylesOptions = findOptionsForSelectFilter('yogaStyles', filterConfig);
-    const certificateOptions = findOptionsForSelectFilter('certificate', filterConfig);
+    const servicesOptions = findOptionsForSelectFilter('services', filterConfig);
+    const proOptions = findOptionsForSelectFilter('pro', filterConfig);
 
     return (
       <Page
@@ -430,14 +429,14 @@ export class ListingPageComponent extends Component {
                     priceTitle={priceTitle}
                     formattedPrice={formattedPrice}
                     richTitle={richTitle}
-                    listingCertificate={publicData ? publicData.certificate : null}
-                    certificateOptions={certificateOptions}
+                    listingPro={publicData ? publicData.pro : null}
+                    proOptions={proOptions}
                     hostLink={hostLink}
                     showContactUser={showContactUser}
                     onContactUser={this.onContactUser}
                   />
                   <SectionDescriptionMaybe description={description} />
-                  <SectionFeaturesMaybe options={yogaStylesOptions} publicData={publicData} />
+                  <SectionFeaturesMaybe options={servicesOptions} publicData={publicData} />
                   <SectionMapMaybe
                     geolocation={geolocation}
                     publicData={publicData}
@@ -628,8 +627,5 @@ const ListingPage = compose(
   ),
   injectIntl
 )(ListingPageComponent);
-
-ListingPage.setInitialValues = initialValues => setInitialValues(initialValues);
-ListingPage.loadData = loadData;
 
 export default ListingPage;

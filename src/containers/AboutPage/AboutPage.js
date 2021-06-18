@@ -12,7 +12,7 @@ import {
 } from '../../components';
 
 import css from './AboutPage.module.css';
-import image from './about-us-1056.jpg';
+import image from './about-us.jpg';
 
 const AboutPage = () => {
   const { siteTwitterHandle, siteFacebookPage } = config;
@@ -25,8 +25,8 @@ const AboutPage = () => {
       schema={{
         '@context': 'http://schema.org',
         '@type': 'AboutPage',
-        description: 'About Yogatime',
-        name: 'About page',
+        description: 'Mikä on Weddi?',
+        name: 'Tietoa Weddistä',
       }}
     >
       <LayoutSingleColumn>
@@ -35,51 +35,38 @@ const AboutPage = () => {
         </LayoutWrapperTopbar>
 
         <LayoutWrapperMain className={css.staticPageWrapper}>
-          <h1 className={css.pageTitle}>Find new depths in your yoga practice</h1>
+          <h1 className={css.pageTitle}>Löydä unelmiesi häät Weddistä</h1>
           <img className={css.coverImage} src={image} alt="My first ice cream." />
 
           <div className={css.contentWrapper}>
             <div className={css.contentSide}>
-              <p>Yoga was listed by UNESCO as an intangible cultural heritage.</p>
+              <p>Häiden järjestäminen saattaa stressata. Meidän tehtävämme on minimoida se.</p>
             </div>
 
             <div className={css.contentMain}>
               <h2>
-                Each yoga practitioner is an individual, and each one of us needs different care.
-                Working together with an experienced yoga teacher offers the possibility to rise
-                our practise to a whole new level.
+                Jokainen haluaa itselleen omannäköiset häät. Kuitenkin tämä toive saattaa olla vaikea toteuttaa. 
+                Tietoa on valtavasti, se on ympäriinsä: nettisivuilla, messuilla, blogeissa, lehdissä.
               </h2>
 
               <p>
-                Whether it is the alignment of asanas or being able to set the focus of the class,
-                we all have our own struggles and goals. Some of these cannot be addressed in a
-                regular class of twenty yogis. Working together with the experienced yoga teachers
-                from Yogatime, you can together create just the right class for you.
+                Weddin tehtävä on tuoda kaikki tämä tieto yhden sivuston alle. Aloitamme kuitenkin palveluntarjoajista.
+                Tavoitteenamme on luoda sivusto kaikille hääpalveluiden tuottajille, jolta he voivat parhaiten tavoittaa asiakkaansa.
+                
               </p>
 
-              <h3 className={css.subtitle}>Are you a yoga teacher?</h3>
+              <h3 className={css.subtitle}>Oletko hääpalveluiden tuottaja?</h3>
 
               <p>
-                Yogatime offers you a platform through which you can reach thousands of yoga
-                practitioners. Offering private yoga classes through Yogatime offers you a
-                possibility to grow your customer base and earn some extra income on top of your
-                regular classes.
-              </p>
-
-              <h3 id="contact" className={css.subtitle}>
-                Create your own marketplace like Yogatime
-              </h3>
-              <p>
-                Yogatime is brought to you by{' '}
-                <ExternalLink href="http://sharetribe.com">Sharetribe</ExternalLink>. Sharetribe
-                offers anyone a possibility to create a marketplace without restricting your own
-                creativity. Do not hesitate to reach out and learn how to best turn your
-                marketplace idea to reality.
+                Weddi tarjoaa sinulle ja yrityksellesi kätevän markkinapaikan tuoda palvelusi esille hyvässä valossa ja tavoittaa asiakkaat.
+                Voit vähentää markkinointikulujasi ja jopa löytää täysin uusia asiakassegmenttejä Weddin avulla. 
+                Hääpalveluiden varauksessa ongelma on useimmiten luottamus, sillä kaiken pitää mennä nappiin juuri sinä tiettynä päivänä.
+                Weddi tukee tapoja, joilla asiakkaat voivat luottavaisin mielin ostaa palveluitasi.
               </p>
               <p>
-                You can also checkout our{' '}
-                <ExternalLink href={siteFacebookPage}>Facebook</ExternalLink> and{' '}
-                <ExternalLink href={siteTwitterPage}>Twitter</ExternalLink>.
+                Voit myös tykätä meistä {' '}
+                <ExternalLink href={siteFacebookPage}>Facebookissa</ExternalLink> ja seurata{' '}
+                <ExternalLink href={siteTwitterPage}>Twitterissä</ExternalLink>.
               </p>
             </div>
           </div>

@@ -65,7 +65,7 @@ exports[`ListingCard matches snapshot 1`] = `
         title
       </div>
       <div
-        className="certificateInfo"
+        className="proInfo"
       />
     </div>
   </div>

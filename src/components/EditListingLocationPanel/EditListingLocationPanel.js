@@ -81,6 +81,8 @@ class EditListingLocationPanel extends Component {
     return (
       <div className={classes}>
         <h1 className={css.title}>{panelTitle}</h1>
+        <h3>Voit kertoa esim. vain paikkakunnan tai tarkemman osoitteen, mikäli se on tarpeen.</h3>
+        <br></br>
         <EditListingLocationForm
           className={css.form}
           initialValues={this.state.initialValues}

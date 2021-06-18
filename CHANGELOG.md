@@ -17,6 +17,60 @@ https://github.com/sharetribe/flex-template-web/
 
 ## Upcoming version 2020-XX-XX
 
+- [fix] Handle changing the start time in BookingTimeForm so that it doesn't cause error for
+  fetching the lineItems. [#143](https://github.com/sharetribe/ftw-hourly/pull/143)
+
+## [v10.1.1] 2021-04-20
+
+- [fix] currency for Poland (PLN) [#140](https://github.com/sharetribe/ftw-hourly/pull/140)
+
+### Updates from upstream (FTW-daily v8.1.0)
+
+- [change] Update jose to v3.11.4 [#1433](https://github.com/sharetribe/ftw-daily/pull/1433)
+- [add] Update fr.json, es.json and partially de.json
+  [#1431](https://github.com/sharetribe/ftw-daily/pull/1431)
+- [fix] currency conversion should not expect that env-variable is set.
+  [#1425](https://github.com/sharetribe/ftw-daily/pull/1425)
+- [fix] LoadableComponentErrorBoundary should be used in prod, not in dev-mode with
+  hot-loading.[#1429](https://github.com/sharetribe/ftw-daily/pull/1429)
+- [fix] currency for Poland (PLN) [#1427](https://github.com/sharetribe/ftw-daily/pull/1427)
+
+  [v10.1.1]: https://github.com/sharetribe/ftw-hourly/compare/v10.1.0...v10.1.1
+
+## [v10.1.0] 2021-03-11
+
+### Updates from upstream (FTW-daily v8.1.0)
+
+- [change] Specify required Node.js versions in package.json and update the node version used in
+  CircleCI. Currently, the required Node.js version comes from
+  [jose](https://github.com/panva/jose#runtime-support-matrix) package which is used with social
+  logins. [#1418](https://github.com/sharetribe/ftw-daily/pull/1418)
+- [fix] enforce upper case for currency and improve error message for it.
+  [#1417](https://github.com/sharetribe/ftw-daily/pull/1417)
+- [add] Add `LoadableComponentErrorBoundary` for handling ChunkLoadErrors with error boundary.
+  [#1416](https://github.com/sharetribe/ftw-daily/pull/1416)
+
+  [v10.1.0]: https://github.com/sharetribe/ftw-hourly/compare/v10.0.0...v10.1.0
+
+## [v10.0.0] 2021-02-17
+
+This major release adds support for code-splitting using
+[Loadable Components](https://loadable-components.com/). At this point, we added route-based code
+splitting, which meant changes to routeConfiguration.js and how "loadData" & "setInitialValues"
+functions are defined and passed to routeConfiguration. Read more from
+[Flex Docs](https://www.sharetribe.com/docs/ftw-routing/how-code-splitting-works-in-ftw/) and
+related pull requests.
+
+### Updates from upstream (FTW-daily v8.0.0)
+
+- [fix] Remove unintended Lodash usage, unspecified window-scope calls and unused vars
+  [#1413](https://github.com/sharetribe/ftw-daily/pull/1413)
+- [add] Route-based code splitting. This is done against sharetribe-scripts v5.0.0 using Loadable
+  components. Read more from the pull request.
+  [#1411](https://github.com/sharetribe/ftw-daily/pull/1411)
+
+  [v10.0.0]: https://github.com/sharetribe/ftw-hourly/compare/v9.3.0...v10.0.0
+
 ## [v9.3.0] 2021-01-13
 
 - [fix] Use dayCountAvailableForBooking config instead of hard-coded value in FieldDateAndTimeInput

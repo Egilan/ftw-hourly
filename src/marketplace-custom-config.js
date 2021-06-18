@@ -36,7 +36,7 @@
 export const filters = [
   {
     id: 'dates-length',
-    label: 'Dates',
+    label: 'Päivä',
     type: 'BookingDateRangeLengthFilter',
     group: 'primary',
     // Note: BookingDateRangeFilter is fixed filter,
@@ -64,7 +64,7 @@ export const filters = [
   },
   {
     id: 'price',
-    label: 'Price',
+    label: 'Hinta',
     type: 'PriceFilter',
     group: 'primary',
     // Note: PriceFilter is fixed filter,
@@ -80,7 +80,7 @@ export const filters = [
   },
   {
     id: 'keyword',
-    label: 'Keyword',
+    label: 'Hakusanat',
     type: 'KeywordFilter',
     group: 'primary',
     // Note: KeywordFilter is fixed filter,
@@ -92,11 +92,11 @@ export const filters = [
     config: {},
   },
   {
-    id: 'yogaStyles',
-    label: 'Yoga styles',
+    id: 'services',
+    label: 'Palvelut',
     type: 'SelectMultipleFilter',
     group: 'secondary',
-    queryParamNames: ['pub_yogaStyles'],
+    queryParamNames: ['pub_services'],
     config: {
       // Optional modes: 'has_all', 'has_any'
       // https://www.sharetribe.com/api-reference/marketplace.html#extended-data-filtering
@@ -107,30 +107,35 @@ export const filters = [
       // Note: label is not added through the translation files
       // to make filter customizations a bit easier.
       options: [
-        { key: 'ashtanga', label: 'Ashtanga' },
-        { key: 'hatha', label: 'Hatha' },
-        { key: 'kundalini', label: 'Kundalini' },
-        { key: 'restorative', label: 'Restorative' },
-        { key: 'vinyasa', label: 'Vinyasa' },
-        { key: 'yin', label: 'Yin' },
+        { key: 'valokuvaus', label: 'Valokuvaus' },
+        { key: 'videokuvaus', label: 'Videokuvaus' },
+        { key: 'bändi', label: 'Bändi' },
+        { key: 'dj', label: 'DJ' },
+        { key: 'hääsuunnittelu', label: 'Hääsuunnittelu' },
+        { key: 'catering', label: 'Catering' },
+        { key: 'juhlatilat', label: 'Juhlatilat' },
+        { key: 'hääpuvut', label: 'Hääpuvut' },
+        { key: 'koristelu', label: 'Koristelu' },
+        { key: 'kukat', label: 'Kukat' },
+        { key: 'korut', label: 'Korut' },
+
       ],
     },
   },
   {
-    id: 'certificate',
-    label: 'Certificate',
+    id: 'pro',
+    label: 'Ammattilainen',
     type: 'SelectSingleFilter',
     group: 'secondary',
-    queryParamNames: ['pub_certificate'],
+    queryParamNames: ['pub_pro'],
     config: {
       // "key" is the option you see in Flex Console.
       // "label" is set here for the UI only.
       // Note: label is not added through the translation files
       // to make filter customizations a bit easier.
       options: [
-        { key: 'none', label: 'None', hideFromFilters: true, hideFromListingInfo: true },
-        { key: '200h', label: 'Registered yoga teacher 200h' },
-        { key: '500h', label: 'Registered yoga teacher 500h' },
+        { key: 'ammattilainen', label: 'Ammattilainen' },
+        { key: 'harrastelija', label: 'Harrastelija' },
       ],
     },
   },
@@ -152,14 +157,14 @@ export const sortConfig = {
   conflictingFilters: ['keyword'],
 
   options: [
-    { key: 'createdAt', label: 'Newest' },
-    { key: '-createdAt', label: 'Oldest' },
-    { key: '-price', label: 'Lowest price' },
-    { key: 'price', label: 'Highest price' },
+    { key: 'createdAt', label: 'Uusin' },
+    { key: '-createdAt', label: 'Vanhin' },
+    { key: '-price', label: 'Alin hinta' },
+    { key: 'price', label: 'Korkein hinta' },
 
     // The relevance is only used for keyword search, but the
     // parameter isn't sent to the Marketplace API. The key is purely
     // for handling the internal state of the sorting dropdown.
-    { key: 'relevance', label: 'Relevance', longLabel: 'Relevance (Keyword search)' },
+    { key: 'relevance', label: 'Osuvuus', longLabel: 'Osuvuus (hakusanojen perusteella)' },
   ],
 };

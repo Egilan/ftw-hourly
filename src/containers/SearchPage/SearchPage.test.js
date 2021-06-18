@@ -1,19 +1,8 @@
 import React from 'react';
 import { renderShallow } from '../../util/test-helpers';
 import { fakeIntl } from '../../util/test-data';
-import { types as sdkTypes } from '../../util/sdkLoader';
 import { SearchPageComponent } from './SearchPage';
-import reducer, {
-  ADD_FILTER,
-  LOAD_LISTINGS,
-  addFilter,
-  callFetchListings,
-  initialState,
-  loadListings,
-  watchLoadListings,
-} from './SearchPage.duck';
 
-const { LatLng } = sdkTypes;
 const noop = () => null;
 
 describe('SearchPageComponent', () => {
@@ -42,8 +31,8 @@ describe('SearchPageComponent', () => {
       onSearchMapListings: noop,
       sendVerificationEmailInProgress: false,
       onResendVerificationEmail: noop,
-      certificateConfig: [{ key: 'cat1', label: 'Cat 1' }, { key: 'cat2', label: 'Cat 2' }],
-      yogaStylesConfig: [{ key: 'dog1', label: 'Dog 1' }, { key: 'dog2', label: 'Dog 2' }],
+      proConfig: [{ key: 'cat1', label: 'Cat 1' }, { key: 'cat2', label: 'Cat 2' }],
+      servicesConfig: [{ key: 'dog1', label: 'Dog 1' }, { key: 'dog2', label: 'Dog 2' }],
       dateRangeLengthFilterConfig: {
         active: true,
         options: [

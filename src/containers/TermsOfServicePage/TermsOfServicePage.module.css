@@ -1,3 +1,5 @@
+@import '../../styles/customMediaQueries.css';
+
 .heading {
   margin: 5px 0 18px 0;
 
@@ -11,3 +13,8 @@
     max-width: 563px;
   }
 }
+/* 
+p  {
+  margin-bottom: 25px;
+  font-size: 25px;
+} */

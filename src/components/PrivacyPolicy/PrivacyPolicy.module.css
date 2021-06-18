@@ -13,6 +13,9 @@
     }
   }
 
+  
+  
+
   & .lastUpdated {
     @apply --marketplaceBodyFontStyles;
     margin-top: 0;
@@ -23,4 +26,10 @@
       margin-bottom: 54px;
     }
   }
+}
+
+
+.privacyPolicyList {
+  margin-left: 30px;
+  list-style-type: circle;
 }

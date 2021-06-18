@@ -8,7 +8,7 @@ const dev = process.env.REACT_APP_ENV === 'development';
 
 // If you want to change the language, remember to also change the
 // locale data and the messages in the app.js file.
-const locale = 'en';
+const locale = 'fi';
 const i18n = {
   /*
     0: Sunday
@@ -16,7 +16,7 @@ const i18n = {
     ...
     6: Saturday
   */
-  firstDayOfWeek: 0,
+  firstDayOfWeek: 1,
 };
 
 // Should search results be ordered by distance to origin.
@@ -57,7 +57,7 @@ const enableAvailability = process.env.REACT_APP_AVAILABILITY_ENABLED === 'true'
 //
 // See also the API reference for querying time slots:
 // https://www.sharetribe.com/api-reference/marketplace.html#query-time-slots
-const dayCountAvailableForBooking = 90;
+const dayCountAvailableForBooking = 760;
 
 // To pass environment variables to the client app in the build
 // script, react-scripts (and the sharetribe-scripts fork of
@@ -67,7 +67,10 @@ const sdkClientId = process.env.REACT_APP_SHARETRIBE_SDK_CLIENT_ID;
 const sdkBaseUrl = process.env.REACT_APP_SHARETRIBE_SDK_BASE_URL;
 const sdkTransitVerbose = process.env.REACT_APP_SHARETRIBE_SDK_TRANSIT_VERBOSE === 'true';
 
-const currency = process.env.REACT_APP_SHARETRIBE_MARKETPLACE_CURRENCY;
+// Marketplace currency.
+// It should match one of the currencies listed in currency-config.js
+const currencyConf = process.env.REACT_APP_SHARETRIBE_MARKETPLACE_CURRENCY;
+const currency = currencyConf ? currencyConf.toUpperCase() : currencyConf;
 
 // Currency formatting options.
 // See: https://github.com/yahoo/react-intl/wiki/API#formatnumber
@@ -75,7 +78,7 @@ const currencyConfig = currencyConfiguration(currency);
 
 // Listing minimum price in currency sub units, e.g. cents.
 // 0 means no restriction to the price
-const listingMinimumPriceSubUnits = 0;
+const listingMinimumPriceSubUnits = 5000;
 
 // Sentry DSN (Data Source Name), a client key for authenticating calls to Sentry
 const sentryDsn = process.env.REACT_APP_SENTRY_DSN;
@@ -93,16 +96,16 @@ const streetAddress = 'Bulevardi 14';
 const canonicalRootURL = process.env.REACT_APP_CANONICAL_ROOT_URL;
 
 // Site title is needed in meta tags (bots and social media sharing reads those)
-const siteTitle = 'Yogatime';
+const siteTitle = 'Weddi';
 
 // Twitter handle is needed in meta tags (twitter:site). Start it with '@' character
-const siteTwitterHandle = '@sharetribe';
+const siteTwitterHandle = '@weddi_fi';
 
 // Instagram page is used in SEO schema (http://schema.org/Organization)
 const siteInstagramPage = null;
 
 // Facebook page is used in SEO schema (http://schema.org/Organization)
-const siteFacebookPage = 'https://www.facebook.com/Sharetribe/';
+const siteFacebookPage = 'https://www.facebook.com/Weddi.fi/';
 
 // Social logins & SSO
 

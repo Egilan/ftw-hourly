@@ -1,6 +1,22 @@
 /*
 If you need to add css to the Logo you can do it here.
 
-.logoMobile {
-}
+
 */
+
+.logoDesktop {
+    /* height: 60px;
+    margin: 0;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);*/
+    transform: translateY(-10px); 
+    /* color: white; */
+}
+.logoMobile {
+    /* height: 40px;
+    margin: 0;
+    position: relative; */
+    transform: translateY(-100px); 
+    /* top: 50%; */
+}

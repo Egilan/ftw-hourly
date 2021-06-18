@@ -1,3 +1,5 @@
+@import '../../styles/customMediaQueries.css';
+
 .root {
 }
 
@@ -79,7 +81,7 @@
   }
 
   @media (--viewportXLarge) {
-    max-width: 1056px;
+    max-width: 1256px;
     padding: 0;
   }
 }
@@ -102,8 +104,8 @@
   top: calc(-1 * var(--LandingPage_sectionMarginTop));
 
   @media (--viewportMedium) {
-    width: 192px;
-    height: 8px;
+    width: 252px;
+    height: 5px;
     top: calc(-1 * var(--LandingPage_sectionMarginTopMedium));
   }
 

@@ -7,55 +7,46 @@ const { LatLng, LatLngBounds } = sdkTypes;
 //
 // Each item in the array should be an object with a unique `id` (String) and a
 // `predictionPlace` (util.types.place) properties.
-export default [
+const defaultLocations = [
   {
-    id: 'default-new-york',
+    id: 'default-helsinki',
     predictionPlace: {
-      address: 'New York City, New York, USA',
+      address: 'Helsinki, Uudenmaan maakunta, Suomi',
       bounds: new LatLngBounds(
-        new LatLng(40.917576401307, -73.7008392055224),
-        new LatLng(40.477399, -74.2590879797556)
+        new LatLng(60.37960431, 25.17705468),
+        new LatLng(60.00650448, 24.69011268)
       ),
     },
   },
   {
-    id: 'default-los-angeles',
+    id: 'default-turku',
     predictionPlace: {
-      address: 'Los Angeles, California, USA',
+      address: 'Turku, Varsinais-Suomen maakunta, Suomi',
       bounds: new LatLngBounds(
-        new LatLng(34.161440999758, -118.121305008073),
-        new LatLng(33.9018913203336, -118.521456965901)
+        new LatLng(60.6655688, 22.56176223),
+        new LatLng(60.26266406, 21.93796566)
       ),
     },
   },
   {
-    id: 'default-san-francisco',
+    id: 'default-tampere',
     predictionPlace: {
-      address: 'San Francisco, California, USA',
+      address: 'Tampere, Pirkanmaan maakunta, Suomi',
       bounds: new LatLngBounds(
-        new LatLng(37.8324430069081, -122.354995082683),
-        new LatLng(37.6044780500533, -122.517910874663)
+        new LatLng(61.77274519, 24.07749844),
+        new LatLng(61.36274108, 23.42024484)
       ),
     },
   },
   {
-    id: 'default-seattle',
+    id: 'default-oulu',
     predictionPlace: {
-      address: 'Seattle, Washington, USA',
+      address: 'Oulu, Pohjois-Pohjanmaan maakunta, Suomi',
       bounds: new LatLngBounds(
-        new LatLng(47.7779392908564, -122.216605992108),
-        new LatLng(47.3403950185547, -122.441233019046)
-      ),
-    },
-  },
-  {
-    id: 'default-portland',
-    predictionPlace: {
-      address: 'Portland, Oregon, USA',
-      bounds: new LatLngBounds(
-        new LatLng(45.858099013046, -122.441059986416),
-        new LatLng(45.3794799927623, -122.929215816001)
+        new LatLng(65.5687753, 26.31163393),
+        new LatLng(64.5713489, 24.50536293)
       ),
     },
   },
 ];
+export default defaultLocations;

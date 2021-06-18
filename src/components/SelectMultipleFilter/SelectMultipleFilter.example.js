@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import SelectMultipleFilter from './SelectMultipleFilter';
 import { stringify, parse } from '../../util/urlHelpers';
 
-const URL_PARAM = 'pub_yogaStyles';
+const URL_PARAM = 'pub_services';
 
 const options = [
   { key: 'ashtanga', label: 'Ashtanga' },
@@ -20,19 +20,19 @@ const handleSubmit = (values, history) => {
   history.push(`${window.location.pathname}${queryParams}`);
 };
 
-const YogaStylesFilterPopup = withRouter(props => {
+const ServicesFilterPopup = withRouter(props => {
   const { history, location } = props;
 
   const params = parse(location.search);
-  const yogaStyles = params[URL_PARAM];
-  const initialValues = { [URL_PARAM]: !!yogaStyles ? yogaStyles : null };
+  const services = params[URL_PARAM];
+  const initialValues = { [URL_PARAM]: !!services ? services : null };
 
   return (
     <SelectMultipleFilter
       id="SelectMultipleFilterPopupExample"
-      name="yogaStyles"
+      name="services"
       queryParamNames={[URL_PARAM]}
-      label="yogaStyles"
+      label="services"
       onSubmit={values => handleSubmit(values, history)}
       showAsPopup={true}
       liveEdit={false}
@@ -43,25 +43,25 @@ const YogaStylesFilterPopup = withRouter(props => {
   );
 });
 
-export const YogaStylesFilterPopupExample = {
-  component: YogaStylesFilterPopup,
+export const ServicesFilterPopupExample = {
+  component: ServicesFilterPopup,
   props: {},
   group: 'filters',
 };
 
-const YogaStylesFilterPlain = withRouter(props => {
+const ServicesFilterPlain = withRouter(props => {
   const { history, location } = props;
 
   const params = parse(location.search);
-  const yogaStyles = params[URL_PARAM];
-  const initialValues = { [URL_PARAM]: !!yogaStyles ? yogaStyles : null };
+  const services = params[URL_PARAM];
+  const initialValues = { [URL_PARAM]: !!services ? services : null };
 
   return (
     <SelectMultipleFilter
       id="SelectMultipleFilterPlainExample"
-      name="yogaStyles"
+      name="services"
       queryParamNames={[URL_PARAM]}
-      label="yogaStyles"
+      label="services"
       onSubmit={values => {
         handleSubmit(values, history);
       }}
@@ -73,8 +73,8 @@ const YogaStylesFilterPlain = withRouter(props => {
   );
 });
 
-export const YogaStylesFilterPlainExample = {
-  component: YogaStylesFilterPlain,
+export const ServicesFilterPlainExample = {
+  component: ServicesFilterPlain,
   props: {},
   group: 'filters',
 };

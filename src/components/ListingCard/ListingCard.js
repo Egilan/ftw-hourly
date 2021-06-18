@@ -35,8 +35,8 @@ const priceData = (price, intl) => {
   return {};
 };
 
-const getCertificateInfo = (certificateOptions, key) => {
-  return certificateOptions.find(c => c.key === key);
+const getProInfo = (proOptions, key) => {
+  return proOptions.find(c => c.key === key);
 };
 
 class ListingImage extends Component {
@@ -64,9 +64,9 @@ export const ListingCardComponent = props => {
   const firstImage =
     currentListing.images && currentListing.images.length > 0 ? currentListing.images[0] : null;
 
-  const certificateOptions = findOptionsForSelectFilter('certificate', filtersConfig);
-  const certificate = publicData
-    ? getCertificateInfo(certificateOptions, publicData.certificate)
+  const proOptions = findOptionsForSelectFilter('pro', filtersConfig);
+  const pro = publicData
+    ? getProInfo(proOptions, publicData.pro)
     : null;
   const { formattedPrice, priceTitle } = priceData(price, intl);
 
@@ -113,9 +113,9 @@ export const ListingCardComponent = props => {
               longWordClass: css.longWord,
             })}
           </div>
-          <div className={css.certificateInfo}>
-            {certificate && !certificate.hideFromListingInfo ? (
-              <span>{certificate.label}</span>
+          <div className={css.proInfo}>
+            {pro && !pro.hideFromListingInfo ? (
+              <span>{pro.label}</span>
             ) : null}
           </div>
         </div>

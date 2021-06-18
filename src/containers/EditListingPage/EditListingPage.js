@@ -33,7 +33,6 @@ import {
   requestImageUpload,
   updateImageOrder,
   removeListingImage,
-  loadData,
   clearUpdatedTab,
   savePayoutDetails,
 } from './EditListingPage.duck';
@@ -79,7 +78,6 @@ export const EditListingPageComponent = props => {
     page,
     params,
     scrollingDisabled,
-    allowOnlyOneListing,
     stripeAccountFetched,
     stripeAccount,
     updateStripeAccountError,
@@ -127,7 +125,7 @@ export const EditListingPageComponent = props => {
         };
 
     return <NamedRedirect {...redirectProps} />;
-  } else if (allowOnlyOneListing && isNewURI && currentUserListingFetched && currentUserListing) {
+  } else if ( isNewURI && currentUserListingFetched && currentUserListing) {
     // If we allow only one listing per provider, we need to redirect to correct listing.
     return (
       <NamedRedirect
@@ -400,7 +398,5 @@ const EditListingPage = compose(
     mapDispatchToProps
   )
 )(injectIntl(EditListingPageComponent));
-
-EditListingPage.loadData = loadData;
 
 export default EditListingPage;

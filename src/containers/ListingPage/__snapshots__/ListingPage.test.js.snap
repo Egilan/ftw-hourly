@@ -124,7 +124,7 @@ exports[`ListingPage matches snapshot 1`] = `
             className="mainContent"
           >
             <SectionHeading
-              certificateOptions={
+              proOptions={
                 Array [
                   Object {
                     "key": "cat1",
